@@ -1,0 +1,18 @@
+@model Barbers
+
+<h1>Запись к @Model.Name</h1>
+
+<form asp-action="Book" method="post">
+    <input type="hidden" name="BarberId" value="@Model.Id" />
+
+    <label>Ваше имя</label>
+    <input type="text" name="ClientName" required />
+
+    <label>Телефон</label>
+    <input type="text" name="ClientPhone" required />
+
+    <label>Выберите дату</label>
+    <input type="date" name="Date" required />
+
+    <button type="submit">Записаться</button>
+</form>

@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Barbers>
+
+    <h1>Выберите мастера</h1>
+
+    <h2>Barber page</h2>
+
+<div class="container top">
+    <div class="barber-list">
+        <ul>
+            
+        </ul>
+    </div>
+</div>
+
+<div class="container middle">
+    <div class="barber-list">
+        <ul>
+            @foreach (var barber in Model)
+            {
+
+                <img src="@barber.PhotoUrl" alt="@barber.Name" style="width:100px" ; />
+                <h2>@barber.Name</h2>
+                <p>@barber.Description</p>
+                <a href="@Url.Action("Book", "Barber", new{ barber.Id})">Записаться</a>
+
+            }
+        </ul>
+    </div>
+</div>
+
+

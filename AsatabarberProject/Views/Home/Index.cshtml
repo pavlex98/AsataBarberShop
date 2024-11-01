@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model IEnumerable<Barbers>
+
+
+
+<h2>Our Barbers</h2>
+
+<ul>
+    @foreach (var barber in Model)
+    {
+            <img src="@barber.PhotoUrl" alt="@barber.Name" style="width:100px" ; />
+            <h2>@barber.Name</h2>
+            <p>@barber.Description</p>
+            <a href="@Url.Action("Book", "Barber", new{ barber.Id})">Записаться</a>
+
+    }
+</ul>
