@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AsatabarberProject")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5d7fed98a09a43c2a617db0545c35733f845923a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+349737827397a4c21b47be19425a109a4cbb24b3")]
 [assembly: System.Reflection.AssemblyProductAttribute("AsatabarberProject")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AsatabarberProject")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

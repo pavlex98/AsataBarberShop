@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0OdPyPTG1pj/9bSuKVmoH5MPVW+RQ3fBhtJyOWo9vBg=",
+  "Hash": "7Z2v2obv7UwRKqPf/bFrrvLeLXeeMcuKcxHEFBtX16g=",
   "Source": "AsatabarberProject",
   "BasePath": "_content/AsatabarberProject",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\User\\source\\repos\\AsatabarberProject\\AsatabarberProject\\wwwroot\\images\\banner.jpg",
+      "SourceId": "AsatabarberProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\AsatabarberProject\\AsatabarberProject\\wwwroot\\",
+      "BasePath": "_content/AsatabarberProject",
+      "RelativePath": "images/banner.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\banner.jpg"
     },
     {
       "Identity": "C:\\Users\\User\\source\\repos\\AsatabarberProject\\AsatabarberProject\\wwwroot\\images\\banner.webp",

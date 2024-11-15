@@ -12,8 +12,8 @@ public class BarberController : Controller
     {
         _context = context;
 
-        //var barbers = _context.Barbers.ToList();
-        //Console.WriteLine(barbers.Count); // Проверка, что данные загружаются
+        var barbers = _context.Barbers.ToList();
+        Console.WriteLine(barbers.Count); // Проверка, что данные загружаются
 
     }
 
@@ -26,10 +26,20 @@ public class BarberController : Controller
     }
 
     // Форма записи на стрижку
+    [Route("Book/Barber/{barberId}")]
     public IActionResult Book(int barberId)
     {
-        var barber = _context.Barbers.Find(barberId);
-        return View(barber);
+        //var barber = _context.Barbers.Find(barberId);
+        //return View(barber);
+                
+            var barber = _context.Barbers.Find(barberId);
+            if (barber == null)
+            {
+                return NotFound("Барбер не найден." + barber.Name);
+            }
+            return View(barber);
+        
+
     }
 
     [HttpPost]
@@ -48,7 +58,7 @@ public class BarberController : Controller
     // Подтверждение записи
     public IActionResult Confirmation()
     {
-        return View();
+        return View("Success");
     }
 
 }

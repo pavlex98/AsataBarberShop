@@ -1,18 +1,29 @@
 @model Barbers
 
-<h1>Запись к @Model.Name</h1>
+<h1 class="text-center mb-4 text-white">Запись к @Model.Name</h1>
 
-<form asp-action="Book" method="post">
-    <input type="hidden" name="BarberId" value="@Model.Id" />
+<form asp-action="Book" method="post" class="d-flex flex-column align-items-center text-white">
+    <input type="hidden" name="Id" value="@Model.Id" />
 
-    <label>Ваше имя</label>
-    <input type="text" name="ClientName" required />
+    <div class="mb-3 w-100" style="max-width: 400px;">
+        <label for="ClientName" class="form-label">Ваше имя</label>
+        <input type="text" id="ClientName" name="ClientName" class="form-control" required />
+    </div>
 
-    <label>Телефон</label>
-    <input type="text" name="ClientPhone" required />
+    <div class="mb-3 w-100" style="max-width: 400px;">
+        <label for="ClientPhone" class="form-label">Телефон</label>
+        <input type="text" id="ClientPhone" name="ClientPhone" class="form-control" required />
+    </div>
 
-    <label>Выберите дату</label>
-    <input type="date" name="Date" required />
+    <div class="mb-3 w-100" style="max-width: 400px;">
+        <label for="Date" class="form-label">Выберите дату</label>
+        <input type="date" id="Date" name="Date" class="form-control" required />
+    </div>
 
-    <button type="submit">Записаться</button>
+    <div class="mb-3 w-100" style="max-width: 400px;">
+        <label for="Time" class="form-label">Выберите время</label>
+        <input type="time" id="Time" name="Time" class="form-control" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100" style="max-width: 400px;">Записаться</button>
 </form>

@@ -29,6 +29,10 @@
       "PackagePath": "staticwebassets\\images\\SmokeAvatar.jpg"
     },
     {
+      "Id": "C:\\Users\\User\\source\\repos\\AsatabarberProject\\AsatabarberProject\\wwwroot\\images\\banner.jpg",
+      "PackagePath": "staticwebassets\\images\\banner.jpg"
+    },
+    {
       "Id": "C:\\Users\\User\\source\\repos\\AsatabarberProject\\AsatabarberProject\\wwwroot\\images\\banner.webp",
       "PackagePath": "staticwebassets\\images\\banner.webp"
     },

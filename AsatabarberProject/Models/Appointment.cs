@@ -10,6 +10,7 @@ namespace AsatabarberProject.Models
         public string ClientName { get; set; }
         public string ClientEmail { get; set; }
         public string ClientPhone { get; set; }
+        public string Time { get; set; }
 
         public Barbers Barber { get; set; }  // Связь с мастером
     }

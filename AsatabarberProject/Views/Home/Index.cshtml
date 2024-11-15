@@ -4,17 +4,33 @@
 
 @model IEnumerable<Barbers>
 
+<!-- Фоновая секция -->
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-12 col-md-10 section-background text-white">
+            <h1 class="display-4 mb-3 text-center text-md-start">Добро пожаловать в Asatabarber</h1>
+            <p class="lead-5 text-center text-md-start">Мы предлагаем первоклассные услуги для вашего стиля и комфорта.</p>
+        </div>
+    </div>
+</div>
 
+<h2 style="text-align:center; color: white;">Наши мастера</h2>
 
-<h2>Our Barbers</h2>
+<div class="container my-4">
+    <div class="row">
+        @foreach (var barber in Model)
+        {
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <div class="card h-100">
+                    <img src="@barber.PhotoUrl" class="card-img-top" alt="@barber.Name"/>
+                    <div class="card-body">
+                        <h5 ckass="card-title">@barber.Name</h5>
+                        <p class="card-text">@barber.Description</p>
+                        <a href="@Url.Action("Barber", "Book", new{ barber.Id})" class="btn btn-primary">Записаться</a>
+                    </div>
+                </div>
+            </div>
+        }
 
-<ul>
-    @foreach (var barber in Model)
-    {
-            <img src="@barber.PhotoUrl" alt="@barber.Name" style="width:100px" ; />
-            <h2>@barber.Name</h2>
-            <p>@barber.Description</p>
-            <a href="@Url.Action("Book", "Barber", new{ barber.Id})">Записаться</a>
-
-    }
-</ul>
+    </div>
+ </div>

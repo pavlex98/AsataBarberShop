@@ -112,3 +112,4 @@ C:\Users\User\source\repos\AsatabarberProject\AsatabarberProject\obj\Debug\net8.
 C:\Users\User\source\repos\AsatabarberProject\AsatabarberProject\obj\Debug\net8.0\AsatabarberProject.pdb
 C:\Users\User\source\repos\AsatabarberProject\AsatabarberProject\obj\Debug\net8.0\AsatabarberProject.genruntimeconfig.cache
 C:\Users\User\source\repos\AsatabarberProject\AsatabarberProject\obj\Debug\net8.0\ref\AsatabarberProject.dll
+C:\Users\User\source\repos\AsatabarberProject\AsatabarberProject\obj\Debug\net8.0\AsatabarberProject.sourcelink.json
