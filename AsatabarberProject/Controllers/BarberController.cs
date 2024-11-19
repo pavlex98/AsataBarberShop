@@ -38,8 +38,6 @@ public class BarberController : Controller
                 return NotFound("Барбер не найден." + barber.Name);
             }
             return View(barber);
-        
-
     }
 
     [HttpPost]
@@ -47,11 +45,12 @@ public class BarberController : Controller
     {
         if (ModelState.IsValid)
         {
+            Console.WriteLine($"BarberId: {appointment.BarberId}, Name: {appointment.ClientName}, Phone: {appointment.ClientPhone}, Date: {appointment.Date}");
             _context.Appointments.Add(appointment);
             await _context.SaveChangesAsync();
             return RedirectToAction("Confirmation");
         }
-
+        Console.WriteLine("Invalid ModelState");
         return View(appointment);
     }
 
@@ -61,6 +60,7 @@ public class BarberController : Controller
         return View("Success");
     }
 
+ 
 }
 
 

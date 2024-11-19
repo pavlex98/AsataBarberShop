@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AsatabarberProject.Migrations
 {
     [DbContext(typeof(BarberShopContext))]
-    [Migration("20241023124640_InitialCreate")]
+    [Migration("20241119104210_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -35,10 +35,6 @@ namespace AsatabarberProject.Migrations
                     b.Property<int>("BarberId")
                         .HasColumnType("int");
 
-                    b.Property<string>("ClientEmail")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
                     b.Property<string>("ClientName")
                         .IsRequired()
                         .HasColumnType("longtext");
@@ -50,9 +46,11 @@ namespace AsatabarberProject.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime(6)");
 
-                    b.HasKey("Id");
+                    b.Property<string>("Time")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
-                    b.HasIndex("BarberId");
+                    b.HasKey("Id");
 
                     b.ToTable("Appointments");
                 });
@@ -80,17 +78,6 @@ namespace AsatabarberProject.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Barbers");
-                });
-
-            modelBuilder.Entity("AsatabarberProject.Models.Appointment", b =>
-                {
-                    b.HasOne("AsatabarberProject.Models.Barbers", "Barber")
-                        .WithMany()
-                        .HasForeignKey("BarberId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Barber");
                 });
 #pragma warning restore 612, 618
         }
